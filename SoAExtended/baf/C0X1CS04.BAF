@@ -1,0 +1,13 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId("C0X1ELHA")
+        ActionOverride("C0X1DEMI",Face(NW))
+        Wait(1)
+        DisplayStringHead("C0X1DEMI",~*scoffs*~)
+        SmallWait(5)
+        ActionOverride("C0X1DEMI",EscapeArea())
+        Wait(4)
+        StartDialogNoSet(Player1)
+END

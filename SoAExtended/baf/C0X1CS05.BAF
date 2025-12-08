@@ -1,0 +1,10 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId(Player1)
+        Wait(1)
+        ActionOverride("C0X1ELHA",EscapeArea())
+        Wait(4)
+        EndCutSceneMode()
+END

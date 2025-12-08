@@ -1,0 +1,17 @@
+IF
+Global("SpawnReirra","C02803",0)
+!Dead("suelf10")
+THEN
+RESPONSE #100
+SetGlobal("SpawnReirra","C02803",1)
+CreateCreature("C0X1REIR",[233.279],SE)
+END
+
+IF
+GlobalGT("C0X1DeminElhan","GLOBAL",0)
+Global("SpawnDemin","C02803",0)
+THEN
+RESPONSE #100
+SetGlobal("SpawnDemin","C02803",1)
+CreateCreature("C0X1DEMI",[486.204],S)
+END

@@ -1,0 +1,25 @@
+IF
+    InMyArea("C0X1CAPT")
+    OR(2)
+    Global("Swing","C02807",0)
+    RealGlobalTimerExpired("Swing","C02807")
+    Global("Drills","C02807",0)
+THEN
+RESPONSE #100
+    SetGlobal("Drills","C02807",1)
+    RealSetGlobalTimer("Swing","C02807",6)
+    Continue()
+END
+
+IF
+    InMyArea("C0X1CAPT")
+    OR(2)
+    Global("Swing","C02807",0)
+    RealGlobalTimerExpired("Swing","C02807")
+    Global("Drills","C02807",1)
+THEN
+RESPONSE #100
+    SetGlobal("Drills","C02807",0)
+    RealSetGlobalTimer("Swing","C02807",3)
+    Continue()
+END

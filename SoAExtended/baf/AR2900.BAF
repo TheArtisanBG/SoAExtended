@@ -1,0 +1,7 @@
+IF
+InParty("Keldorn")
+Global("C0X1KeldornWasInHell","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("C0X1KeldornWasInHell","GLOBAL",1)
+END

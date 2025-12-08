@@ -1,0 +1,44 @@
+IF
+    Global("C0X1Ellesime","GLOBAL",0)
+    See([PC])
+THEN
+    RESPONSE #100
+        ClearAllActions()
+        StartCutSceneMode()
+        Wait(2)
+        FadeToColor([30.0],0)
+        Wait(2)
+        ActionOverride(Player1,JumpToPoint([545.588]))
+        SmallWait(1)
+        ActionOverride(Player1,FaceObject("C0X1ELLE"))
+        ActionOverride(Player2,JumpToPoint([711.570]))
+        SmallWait(1)
+        ActionOverride(Player2,FaceObject("C0X1ELLE"))
+        ActionOverride(Player3,JumpToPoint([788.558]))
+        SmallWait(1)
+        ActionOverride(Player3,FaceObject("C0X1ELLE"))
+        ActionOverride(Player4,JumpToPoint([798.587]))
+        SmallWait(1)
+        ActionOverride(Player4,FaceObject("C0X1ELLE"))
+        ActionOverride(Player5,JumpToPoint([816.532]))
+        SmallWait(1)
+        ActionOverride(Player5,FaceObject("C0X1ELLE"))
+        ActionOverride(Player6,JumpToPoint([848.560]))
+        SmallWait(1)
+        ActionOverride(Player6,FaceObject("C0X1ELLE"))
+        Wait(1)
+        FadeFromColor([30.0],0)
+        Wait(3)
+        FaceObject(Player1)
+        Wait(1)
+        StartDialogNoSet(Player1)
+END
+
+IF
+    Global("C0X1Ellesime","GLOBAL",1)
+    Global("C0X1Ending","GLOBAL",0)
+THEN
+    RESPONSE #100
+    SetGlobal("C0X1Ending","GLOBAL",1)
+    DisplayStringNoNameHead(Myself,~Book One of Shadows of Amn Extended is complete. When you are ready, continue to Throne of Bhaal.~)
+END

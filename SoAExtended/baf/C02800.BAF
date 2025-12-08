@@ -1,0 +1,6 @@
+IF
+Global("SpawnNPCs","C02800",0)
+THEN
+RESPONSE #100
+SetGlobal("SpawnNPCs","C02800",1)
+END

@@ -1,0 +1,23 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId(Player1)
+        FadeFromColor([30.0],0)
+        CreateCreature("C0X1ELL2",[801.1720],N)
+        ActionOverride(Player2,JumpToPoint([756.1823]))
+        ActionOverride(Player3,JumpToPoint([817.1815]))
+        ActionOverride(Player4,JumpToPoint([890.1816]))
+        ActionOverride(Player5,JumpToPoint([849.1865]))
+        ActionOverride(Player6,JumpToPoint([920.1840]))
+        JumpToPoint([871.1720])
+        MoveViewObject(Player1,-1)
+        SmallWait(5)
+        ActionOverride("C0X1ELLE",MoveToPoint([801.1599]))
+        MoveToPoint([871.1599])
+        Wait(1)
+        ActionOverride("C0X1ELLE",FaceObject(Player1))
+        FaceObject("C0X1ELLE")
+        Wait(2)
+        ActionOverride("C0X1ELLE",StartDialogNoSet(Player1))
+END

@@ -1,0 +1,10 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId(Player1)
+        SmallWait(1)
+        ClearAllActions()
+        StartCutSceneMode()
+        StartCutScene("C0X1END3")
+END

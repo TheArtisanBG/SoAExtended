@@ -1,0 +1,16 @@
+IF
+Global("C02800","AR2600",0)
+THEN
+RESPONSE #100
+SetGlobal("C02800","AR2600",1)
+TriggerActivation("C02800Trans",FALSE)
+END
+
+IF
+Global("C02800","AR2600",1)
+THEN
+RESPONSE #100
+SetGlobal("C02800","AR2600",2)
+TriggerActivation("C02800Trans",TRUE)
+TriggerActivation("Tran2800",FALSE)
+END

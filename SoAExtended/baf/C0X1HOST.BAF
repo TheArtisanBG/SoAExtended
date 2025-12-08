@@ -1,0 +1,14 @@
+IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    Global("C0X1AttackedByPC","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("C0X1AttackedByPC","GLOBAL",1)
+END
+
+IF
+    Global("C0X1AttackedByPC","GLOBAL",1)
+THEN
+    RESPONSE #100
+        Enemy()
+END

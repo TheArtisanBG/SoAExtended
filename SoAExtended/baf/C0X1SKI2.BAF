@@ -1,0 +1,25 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId(Player1)
+        SetGlobal("C0X1AttackedByPC","GLOBAL",2)
+        Wait(2)
+        DisplayStringHead("C0X1ELLE",~You would shed blood of my people, even as we make every effort at restitution, <CHARNAME>? I am truly disappointed in you. So be it... begone, and never return!~)
+        Wait(1)
+        CreateVisualEffectObject("SPDIMNDR",Player1)
+        CreateVisualEffectObject("SPDIMNDR",Player2)
+        CreateVisualEffectObject("SPDIMNDR",Player3)
+        CreateVisualEffectObject("SPDIMNDR",Player4)
+        CreateVisualEffectObject("SPDIMNDR",Player5)
+        CreateVisualEffectObject("SPDIMNDR",Player6)
+        Wait(3)
+        FadeToColor([30.0],0)
+        MultiPlayerSync()
+        Wait(1)
+        ActionOverride("C0X1ELLE",DestroySelf())
+        Wait(1)
+        MoveToExpansion()
+        MoveViewObject(Player1,-1)
+        EndCutSceneMode()
+END

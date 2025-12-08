@@ -1,0 +1,12 @@
+IF
+Global("C0X1DeminElhan","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("C0X1DeminElhan","GLOBAL",1)
+CreateCreature("C0X1ELHA",[228.346],SE)
+CreateCreature("C0X1DEMI",[259.375],NW)
+ClearAllActions()
+StartCutSceneMode()
+Wait(3)
+ActionOverride("C0X1DEMI",StartDialogNoSet(Player1))
+END

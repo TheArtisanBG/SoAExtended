@@ -1,0 +1,19 @@
+IF
+Global("C0X1AttackedByPC","GLOBAL",1)
+!InMyArea("C0X1ELLE")
+THEN
+RESPONSE #100
+ClearAllActions()
+StartCutSceneMode()
+StartCutScene("C0X1SKIP")
+END
+
+IF
+Global("C0X1AttackedByPC","GLOBAL",1)
+InMyArea("C0X1ELLE")
+THEN
+RESPONSE #100
+ClearAllActions()
+StartCutSceneMode()
+StartCutScene("C0X1SKI2")
+END

@@ -1,0 +1,21 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId("C0X1DEMI")
+        Wait(1)
+        ActionOverride("C0X1KID1",EscapeArea())
+        ActionOverride("C0X1KID3",EscapeArea())
+        ActionOverride("C0X1KID2",FaceObject(Player1))
+        DisplayStringHead("C0X1KID2",~See you around, saviour!~)
+        SmallWait(5)
+        DisplayStringHead("C0X1KID1",~Hahaha!~)
+        ActionOverride("C0X1KID2",EscapeArea())
+        Wait(3)
+        MoveToPoint([345.394])
+        SmallWait(1)
+        ActionOverride(Player1,FaceObject("C0X1DEMI"))
+        FaceObject(Player1)
+        Wait(1)
+        StartDialogNoSet(Player1)
+END
