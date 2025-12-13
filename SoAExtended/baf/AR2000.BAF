@@ -1,5 +1,7 @@
 IF
     GlobalGT("C0X1MariaQuest","GLOBAL",3)
+    Dead("cefald01")
+    Global("geniesgone","GLOBAL",1)
     Global("C0X1KeldornFruitSeller","AR2000",0)
 THEN
 RESPONSE #100
@@ -10,6 +12,8 @@ END
 
 IF
     Global("C0X1MariaQuest","GLOBAL",4)
+    Dead("cefald01")
+    Global("geniesgone","GLOBAL",1)
     InParty("KELDORN")
     OR(6)
     NearLocation(Player1,2281,2805,15)
