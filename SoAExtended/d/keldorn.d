@@ -13,7 +13,7 @@ DO ~SetGlobal("C0X1MariaQuest","GLOBAL",1)~
 == MARIA ~And... this time, are you here to stay?~
 == KELDORJ ~I...~
 END
-  ++ ~Go on, Keldorn. You've fulfilled your promise. It's time your well-deserved rest.~ EXTERN KELDORJ maria.1
+  ++ ~Go on, Keldorn. You've fulfilled your promise. It's time for your well-deserved rest.~ EXTERN KELDORJ maria.1
   ++ ~It's your choice, my friend. I would like you to stay, but I cannot force you.~ EXTERN KELDORJ maria.1
   ++ ~Irenicus is dead, but my destiny is not over yet. I could still use you.~ EXTERN KELDORJ maria.1
 
@@ -165,7 +165,7 @@ CHAIN IF WEIGHT #-1 ~Global("C0X1MariaQuest","GLOBAL",7)~ THEN KELDORJ maria6
 ~Your purse, sir. I hope its contents are as you expect them to be.~
 DO ~SetGlobal("C0X1MariaQuest","GLOBAL",8)~
 == C0X1NPC2 ~Th—thank you, good knight! I owe my savings to your fortuitous presence! Please allow me to repay—~
-== KELDORJ ~Nay, sir. It is my duty, and I accept your gratitude, but I cannot demand a reward for such a deed. It is my duty, no more.~
+== KELDORJ ~Nay, sir. It is my duty, and I accept your gratitude, but I cannot demand a reward for such a deed. It is what any decent man should have done, were they in my place.~
 DO ~ClearAllActions()
 StartCutSceneMode()
 FaceObject("C0X1NPC2")
