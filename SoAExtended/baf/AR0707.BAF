@@ -1,0 +1,9 @@
+IF
+    Global("C0X1MariaQuest","GLOBAL",1)
+    InMyArea("KELDORN")
+    InMyArea(Player1)
+THEN
+RESPONSE #100
+    SetGlobal("C0X1MariaQuest","GLOBAL",2)
+    ActionOverride("KELDORN",StartDialogNoSet(Player1))
+END

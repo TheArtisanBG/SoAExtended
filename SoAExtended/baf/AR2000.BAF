@@ -1,0 +1,36 @@
+IF
+    GlobalGT("C0X1MariaQuest","GLOBAL",3)
+    Global("C0X1KeldornFruitSeller","AR2000",0)
+THEN
+RESPONSE #100
+SetGlobal("C0X1KeldornFruitSeller","AR2000",1)
+CreateCreature("C0X1NPC1",[2258.2787],SE)
+Continue()
+END
+
+IF
+    Global("C0X1MariaQuest","GLOBAL",4)
+    InParty("KELDORN")
+    OR(6)
+    NearLocation(Player1,2281,2805,15)
+    NearLocation(Player2,2281,2805,15)
+    NearLocation(Player3,2281,2805,15)
+    NearLocation(Player4,2281,2805,15)
+    NearLocation(Player5,2281,2805,15)
+    NearLocation(Player6,2281,2805,15)
+THEN
+RESPONSE #100
+    SetGlobal("C0X1MariaQuest","GLOBAL",5)
+    ClearAllActions()
+    StartCutSceneMode()
+    FadeToColor([30.0],0)
+    Wait(3)
+    ActionOverride(Player1,JumpToPoint([2253.2837]))
+    ActionOverride(Player1,FaceObject("C0X1NPC1"))
+    ActionOverride("KELDORN",JumpToPoint([2313.2822]))
+    ActionOverride("KELDORN",FaceObject("C0X1NPC1"))
+    FadeFromColor([30.0],0)
+    Wait(3)
+    ActionOverride("KELDORN",StartDialogNoSet(Player1))
+    Continue()
+END

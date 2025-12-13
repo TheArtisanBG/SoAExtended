@@ -1,0 +1,58 @@
+IF
+    GlobalGT("C0X1Begin","GLOBAL",0)
+    Global("C0X1KeldornWasInHell","GLOBAL",1)
+    !Global("KeldornFamilyGone","GLOBAL",1)
+    !InMyArea("MARIA")
+    Global("C0X1Maria","AR1003",0)
+THEN
+RESPONSE #100
+SetGlobal("C0X1Maria","AR1003",1)
+CreateCreature("MARIA",[525.463],SE)
+Continue()
+END
+
+IF
+    GlobalGT("C0X1Begin","GLOBAL",0)
+    Global("C0X1KeldornWasInHell","GLOBAL",1)
+    !Global("KeldornFamilyGone","GLOBAL",1)
+    !InMyArea("VESPER")
+    Global("C0X1Vesper","AR1003",0)
+THEN
+RESPONSE #100
+SetGlobal("C0X1Vesper","AR1003",1)
+CreateCreature("VESPER",[500.159],SE)
+Continue()
+END
+
+IF
+    GlobalGT("C0X1Begin","GLOBAL",0)
+    Global("C0X1KeldornWasInHell","GLOBAL",1)
+    !Global("KeldornFamilyGone","GLOBAL",1)
+    !InMyArea("LEONA")
+    Global("C0X1Leona","AR1003",0)
+THEN
+RESPONSE #100
+SetGlobal("C0X1Leona","AR1003",1)
+CreateCreature("LEONA",[558.165],SW)
+Continue()
+END
+
+IF
+    Global("C0X1MariaQuest","GLOBAL",9)
+    InMyArea("MARIA")
+    InMyArea("KELDORN")
+THEN
+RESPONSE #100
+ActionOverride("MARIA",StartDialogNoSet("KELDORN"))
+Continue()
+END
+
+IF
+    Global("C0X1MariaQuest","GLOBAL",12)
+    GlobalTimerExpired("C0X1MariaQuestSkip","GLOBAL")
+THEN
+RESPONSE #100
+    SetGlobal("C0X1MariaQuest","GLOBAL",13)
+    MoveGlobal("AR1003","KELDORN",[648.460])
+    Continue()
+END
