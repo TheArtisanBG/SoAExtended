@@ -86,7 +86,7 @@ CHAIN KELDORJ maria3.2
 ~The gift I am searching for... it is an exotic fruit of Malatra, purple in color and slightly smaller than a normal man's fist in size. During one of my missions for the Order, I received a bundle as a gift from a Malatran trader whom I and my fellows aided.~
 == KELDORJ ~It is not customary for those of the Order to accept rewards for our service, but the man was exceptionally insistent, and it seemed an insult to refuse... I was still a younger man at the time, my duties less strict, and I had more chances to return to my family.~
 == KELDORJ ~The fruit that was not shared with my brothers, I brought home, and Vesper took a particular liking to them, and for the first time was eager to hear the details of my work, to learn the tale of how I acquired them.~
-== KELDORJ ~Ever since then, I have come once every year to see if they can be found in the city's markets. Some years they are, others not... but no matter how slight the chance, so that I might recapture some semblance of that moment of joy. It seems there are none this year, however...~
+== KELDORJ ~Ever since then, I have come once every year to see if they can be found in the city's markets. Some years they are, others not... but I have come no matter slight the chance, so that I might recapture some semblance of that moment of joy. It seems there are none this year, however...~
 == KELDORJ ~Excuse me, sir. Are there "Queen-of-fruit" in stock, perchance?~
 == SHOP04 ~"Queen-of-fruit"? No, milord, ve are not havink any zis season. My suppliers have been saying ze importink vas too expensive zis year, you see. None here vithin ze city, sadly. Perhaps in Trademeet, they be havingk some, ja.~
 == KELDORJ ~Trademeet... I see. Thank you, sir. That is all I needed to ask.~
@@ -100,7 +100,7 @@ CHAIN KELDORJ maria3.3
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0X1MariaQuest","GLOBAL",5)~ THEN KELDORJ maria4
-~May Waukeen's blessings be upon you today, good woman. Have you any "queen-of-fruit" for sale, if I may ask?~
+~May the gods' blessings be upon you today, good woman. Have you any "queen-of-fruit" for sale, if I may ask?~
 DO ~SetGlobal("C0X1MariaQuest","GLOBAL",6)~
 == C0X1NPC1 ~"Queen-of-fruit", is it? Why, you're in luck, milord, I have just received my seasonal shipment not so long ago. I have plenty in stock, fresh as though picked right off the tree! How many would you like to purchase?~
 == KELDORJ ~Hmm. Bring out your largest sack, madam, and fill it with as many as it may hold.~
