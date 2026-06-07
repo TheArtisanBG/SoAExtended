@@ -1,4 +1,5 @@
 IF
+!Global("soa_complete","GLOBAL",1)
 Global("C02800","AR2600",0)
 THEN
 RESPONSE #100
@@ -7,6 +8,7 @@ TriggerActivation("C02800Trans",FALSE)
 END
 
 IF
+Global("soa_complete","GLOBAL",1)
 Global("C02800","AR2600",1)
 THEN
 RESPONSE #100
